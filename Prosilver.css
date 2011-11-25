@@ -137,7 +137,7 @@
 	font-size: 13px;
 }
 
-.pun .postsignature p {
+.pun .postsignature p, .pun .postbody .postedit {
 	font-family: "Verdana", "Helvetica", "Arial", sans-serif;
 	font-size: 10px;
 }
@@ -218,7 +218,7 @@ html {
 }
 
 .pun .punwrap {
-	width: 70%;
+/*	width: 70%;*/
 	margin: auto;
 	min-width: 700px;
 	padding: 10px;
@@ -244,6 +244,10 @@ html {
 	margin-bottom: 12px
 	}
 
+.pun .block, .pun .blockform, .pun .block2col, #postreview {
+	margin-bottom: 1.5em;
+}
+
 /*#punindex .blocktable, */.pun .blockpost {
 	margin-bottom: 6px
 	}
@@ -256,12 +260,12 @@ html {
 	margin-bottom: 0px
 	}
 
-.pun .linkst, .pun .linksb {
+/*.pun .linkst, .pun .linksb {
 	margin-top: -12px
-	}
+	}*/
 
 .pun .postlinksb {
-	margin-top: -6px
+/*	margin-top: -6px*/
 	}
 
 
@@ -281,7 +285,7 @@ html {
 ----------------------------------------------------------------*/
 
 .pun .block .inbox, .pun .blockmenu .inbox {
-	padding: 3px 6px
+	padding: 5px 10px
 	}
 
 /*****************************************************************
@@ -338,7 +342,7 @@ html {
 ----------------------------------------------------------------*/
 
 .pun .linkst {
-	padding: 8px 6px 3px 6px
+	padding: 0px 6px 3px 6px
 	}
 
 .pun .linksb, .pun .postlinksb {
@@ -407,6 +411,21 @@ html {
 	text-align: right;
 	}
 
+.pun #modcontrols {
+/*	margin-bottom: 4px;*/
+	text-align: center;
+	width: 100%;
+}
+
+.pun #modcontrols dd {
+	display: inline;
+}
+
+.pun #modcontrols dd:before {
+	content: " • "
+}
+
+
 
 /* Board Stats
 ----------------------------------------------------------------*/
@@ -441,7 +460,7 @@ html {
 	}
 
 .pun td, .pun th {
-	padding: 4px 6px;
+	padding: 4px 8px;
 	line-height: 1.273em;
 	text-align: left;
 	font-weight: normal;
@@ -519,7 +538,7 @@ html {
 	}
 
 .pun .blocktable .tclcon {
-	padding: 0 11px 0 10px;
+	padding: 0 9px 0 10px;
 	overflow: hidden;
 	height: 1%;
 	min-height: 1px;
@@ -595,7 +614,7 @@ html {
 	}
 
 .pun label {
-	display: block;
+/*	display: block;*/
 	padding: 3px 0
 	}
 
@@ -614,7 +633,7 @@ html {
 	}
 
 .pun fieldset .rbox br {
-	display: none;
+/*	display: none;*/
 	}
 
 .pun fieldset .rbox label {
@@ -631,9 +650,9 @@ html {
 	vertical-align: middle;
 	}
 
-.pun .txtarea {
+/*.pun .txtarea {
 	width: 75%
-	}
+	}*/
 
 .pun .txtarea textarea, .pun input.longinput {
 	width: 100%
@@ -668,6 +687,55 @@ html {
 	padding: 6px 15px;
 	}
 
+.pun .multiselect {
+	float: left;
+	color: #357082;
+	padding-bottom: 7px;
+}
+
+.pun .checklist {
+	border-width: 1px;
+	border-style: solid;
+	max-height: 9em;
+	width: 20em;
+	overflow: auto;
+	padding: 0.25em 0.5em;
+	margin: 0.25em 16px 0 0.15em;
+	background: #fff;
+	border: 1px solid #B4BAC0;
+}
+
+.pun .checklist legend {
+	padding: 0;
+}
+
+.pun .checklist legend span {
+	width: auto;
+	max-width: 25em;
+}
+
+
+.pun .checklist .checklist-item {
+	position: relative;
+}
+
+.pun .checklist .checklist-item label {
+	padding: 0 0 0 1.75em;
+}
+
+.pun .checklist .checklist-item .fld-input {
+	position: absolute;
+	left: 0;
+	top: 0;
+	padding: 0;
+	margin: 0;
+}
+
+.pun .checklist .checklist-item input {
+	margin: 0;
+	height: 1.55em;
+	width: 1.55em;
+}
 
 /*****************************************************************
 7. PROFILES AND ADMIN
@@ -754,7 +822,7 @@ html {
 	}
 
 .pun .postleft dl {
-	padding: 0 6px;
+	padding: 0 8px;
 	}
 
 .pun .postleft .usercontacts, .pun .postleft .icon {
@@ -927,7 +995,8 @@ COLOUR SCHEME
 ----------------------------------------------------------------*/
 
 body {
-	color: #536482
+	color: #536482;
+	background: #fff;
 	}
 
 .pun {
@@ -940,11 +1009,13 @@ body {
 	font-family: Arial, Helvetica, sans-serif;
 	font-weight: bold;
 	color: #115098;
-
 	}
 
+.pun .blockform h2 {
+	margin-top: 24px;
+}
+
 .pun .blocktable h2 {
-	font-weight: normal;
 	font-size: 10px;
 }
 
@@ -988,12 +1059,18 @@ body {
 	-moz-border-radius-topright: 5px;
 }
 
+#brdmenu ul {
+/*	padding-top: 5px;
+	padding-left: 10px;*/
+}
+
 #brdwelcome {
 	border-bottom-left-radius: 5px;
 	border-bottom-right-radius: 5px;
 	-moz-border-radius-bottomleft: 5px;
 	-moz-border-radius-bottomright: 5px;
 	padding-top: 0;
+	margin-bottom: 1.5em;
 }
 
 /* Blue background (informations, forms) */
@@ -1022,6 +1099,7 @@ body {
 
 #announce .box {
 	padding: 7px 0px;
+	margin-bottom: 1.5em;
 }
 
 .infldset {
@@ -1047,6 +1125,10 @@ body {
 
 .pun .required strong span {
 	display: none;
+}
+
+#brdmain {
+	clear: both
 }
 
 /* Posts
@@ -1145,6 +1227,10 @@ body {
 	padding: 0;
 }
 
+.pun #brdtitle {
+	color: #fff;
+}
+
 /* Borders
 ----------------------------------------------------------------*/
 /*
@@ -1182,15 +1268,15 @@ body {
 	text-decoration: underline;
 }
 
-/*.pun h2 a:link, .pun h2 a:visited,
-#brdmenu a:link, #brdmenu a:visited {
+/*.pun h2 a:link, .pun h2 a:visited,*/
+#brdtitle a:link, #brdtitle a:visited {
 	color: #fff
 	}
 
-.pun h2 a:hover, .pun h2 a:active,
-#brdmenu a:hover, #brdmenu a:active {
+/*.pun h2 a:hover, .pun h2 a:active,*/
+#brdtitle a:hover, #brdtitle a:active {
 	color: #fff
-	}*/
+	}
 /*
 .pun .blockpost h2 a:link, .pun .blockpost h2 a:visited {
 	color: #105289;
@@ -1243,8 +1329,12 @@ body {
 	background-image: url(Prosilver/img/forum_unread.gif);
 }
 
-.pun .iredirect .icon {
-	background-image: url(Prosilver/img/forum_links.gif);
+#punindex .iredirect .icon {
+	background-image: url(Prosilver/img/forum_link.gif);
+}
+
+#punindex .redirtext {
+	display: none;
 }
 
 /* Topics */
@@ -1484,7 +1574,8 @@ input[type=button], input[type=submit] {
 	border: 1px solid #666666;
 	background-color: #FAFAFA;
 	background-image:url(Prosilver/img/bg_button.gif);
-	color:#000000;
+	color: #000000;
+
 }
 
 input[type=button]:hover, input[type=submit]:hover {
@@ -1493,13 +1584,27 @@ input[type=button]:hover, input[type=submit]:hover {
 	background-position: 0 100%;
 }
 
+.pun p.buttons input[type=button], .pun p.buttons input[type=submit] {
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+
+input[type=submit] {
+	font-weight: bold;
+}
+
 
 /* Navigation icons
 ----------------------------------------------------------------*/
 
+#brdmenu ul {
+	border-bottom: 1px solid #fff;
+}
+
 #brdmenu li {
 	padding-left: 18px;
 	background: url(Prosilver/img/icon_home.gif) no-repeat left center;
+	line-height: 2.2em;
 }
 
 li#navuserlist {
@@ -1529,6 +1634,10 @@ li#navregister {
 ul.crumbs {
 	padding-left: 18px;
 	background: url(Prosilver/img/icon_home.gif) no-repeat left 60%;
+}
+
+#brdwelcome li {
+	line-height: 2.2em;
 }
 
 /* Post buttons
@@ -1703,4 +1812,56 @@ div#errorbox div {
 }
 #login-form label {
 	display: inline;
+}
+
+
+
+/* Post messages on the left side */
+.pun .blockpost .postbody .postright {
+	margin-left: 0;
+	margin-right: 22%;
+
+}
+
+.pun .blockpost .postbody .postleft {
+	float: right;
+	width: 22%;
+		border-left: 1px solid #fff;
+}
+
+.pun .blockpost .postfoot .postfootright {
+	margin-left: 0;
+	right: 0;
+	padding-right: 23%;
+	position: absolute;
+	top: -2.4em;
+	background: none;
+}
+
+.pun .blockpost .box {
+	position: relative;
+}
+
+.pun .blockpost .postfoot .postfootleft {
+	float: right;
+	width: 22%;
+	clear: both;
+}
+
+.pun .blockpost h2 {
+	padding-left: 8px;
+	padding-top: 1em;
+	padding-bottom: 0.5em;
+}
+
+.pun .blockpost h2 span {
+	padding-left: 0;
+}
+
+.pun .blockpost h2 span span.conr {
+	display: none;
+}
+
+#punviewtopic .blockpost dt {
+	top: -1.7em;
 }
