@@ -980,8 +980,8 @@ body {
 	border: 0;
 }
 
-.pun td, .pun td.tcmod, #postpreview, #viewprofile dd, .pun .forminfo,
-.pun .blockmenu .box, #adstats dd, #brdfooter #modcontrols {
+.pun td, .pun td.tcmod/*, #postpreview, #viewprofile dd, .pun .forminfo,
+.pun .blockmenu .box, #adstats dd, #brdfooter #modcontrols*/ {
 	background-color: #FBFBFB
 	}
 	
