@@ -74,7 +74,7 @@
 	font: 11px Verdana, Helvetica, Arial, sans-serif;
 	}
 
-.pun table, .pun td, .pun th, .pun input, .pun select, .pun legend, .pun optgroup, .pun textarea, .pun small {
+.pun table, .pun td, .pun th, .pun input, .pun select, .pun legend, .pun optgroup, .pun textarea, .pun legend, .pun small {
 	font-size: 1em;
 	font-family: verdana, helvetica, arial, sans-serif;
 	}
@@ -193,6 +193,11 @@
 	font-weight: bold;
 	padding: 0.75em 0 0 0;
 	}
+
+
+.clearl {
+	clear: left;
+}
 
 
 /*****************************************************************
@@ -537,6 +542,14 @@
 	text-align: center;
 	top: 0;
 	}
+
+#punindex .subscribelink {
+	top: 0px;
+}
+
+#punindex .linksb {
+	height: 12px;
+}
 
 /*****************************************************************
 6. MAIN FORMS
@@ -897,6 +910,52 @@
 	text-align: center;
 	}
 
+.pun .multiselect {
+	float: left;
+	padding-bottom: 7px;
+}
+
+.pun .checklist {
+	border-width: 1px;
+	border-style: solid;
+	max-height: 9em;
+	width: 20em;
+	overflow: auto;
+	padding: 0.25em 0.5em;
+	margin: 0.25em 16px 0 0.15em;
+}
+
+.pun .checklist legend {
+	padding: 0;
+}
+
+.pun .checklist legend span {
+	width: auto;
+	max-width: 25em;
+}
+
+.pun .checklist .checklist-item {
+	position: relative;
+}
+
+.pun .checklist .checklist-item label {
+	padding: 0 0 0 1.75em;
+}
+
+.pun .checklist .checklist-item .fld-input {
+	position: absolute;
+	left: 0;
+	top: 0;
+	padding: 0;
+	margin: 0;
+}
+
+.pun .checklist .checklist-item input {
+	margin: 0;
+	height: 1.55em;
+	width: 1.55em;
+}
+
 /*****************************************************************
 COLOUR SCHEME
 *****************************************************************/
@@ -1059,7 +1118,7 @@ body {
 .pun  .postright, .pun .postfootright {
 	border-left-color: #fff
 	}
-	
+
 .pun .blockpost .box.roweven, .pun .blockpost.roweven .box, .pun .roweven .postright, .pun .roweven .postfootright, .pun .roweven .deletemsg {
 	background: #F5F3F5;
 	}
@@ -1134,7 +1193,7 @@ body {
 	border-color: #f1f1f1
 	}
 
-.pun .quotebox, .pun .codebox, 
+.pun .quotebox, .pun .codebox,
 .pun .blockpost label, .pun .deletemsg {
 	border-color: #DBDBCE
 	}
@@ -1199,7 +1258,16 @@ body {
 	color: #0D4473;
 	text-decoration: none;
 }
-	
+
+.pun .multiselect {
+	color: #357082;
+}
+
+.pun .checklist {
+	background: white;
+	border-color: #ccc;
+}
+
 /* Status Indicators
 ----------------------------------------------------------------*/
 
@@ -1482,7 +1550,7 @@ body {
 }
 
 /*
-#punindex .blocktable tbody tr:hover, #punforum .blocktable tbody tr:hover, 
+#punindex .blocktable tbody tr:hover, #punforum .blocktable tbody tr:hover,
 .blocktable tbody tr:hover {
 	background: #F6F4D0;
 }*/
@@ -1576,7 +1644,7 @@ ul.crumbs {
 ----------------------------------------------------------------*/
 
 .pun .postfootright ul {
-	margin-bottom: 3px; 
+	margin-bottom: 3px;
 }
 
 .pun .postfootright li {
