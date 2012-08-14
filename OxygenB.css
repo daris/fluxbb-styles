@@ -48,6 +48,9 @@
 	min-height: 1px
 	}
 
+.clearl {
+	clear: left;
+	}
 
 /* Hidden Elements
 ----------------------------------------------------------------*/
@@ -72,9 +75,10 @@
 
 .pun {
 	font:75%/1.5em Verdana,Helvetica,Arial,sans-serif;
+	line-height: normal;
 	}
 
-.pun table, .pun td, .pun th, .pun input, .pun select, .pun optgroup, .pun textarea, .pun small, .pun samp {
+.pun table, .pun td, .pun th, .pun input, .pun select, .pun optgroup, .pun textarea, .pun small, .pun samp, .pun legend {
 	font-size: 1em;
 	font-family: verdana, helvetica, arial, sans-serif;
 	}
@@ -210,6 +214,11 @@
 /* Page Layout
 ----------------------------------------------------------------*/
 
+html, body {
+	margin: 0;
+	padding: 0
+	}
+
 .pun {
 	margin: 12px 20px
 	}
@@ -224,6 +233,10 @@
 
 #brdheader {
 	margin: 0 0 12px 0;
+	}
+
+#brdtitle p {
+	padding-top: 0px
 	}
 
 #announce, #brdstats {
@@ -278,19 +291,9 @@
 ----------------------------------------------------------------*/
 
 #brdtitle h1 {
-	font-size: 1.454em;
+	font-size: 1.4em;
 	font-weight: bold;
-	line-height: 1em;
 	padding: 3px 0 0 0;
-	}
-
-#brddesc {
-	padding: 3px 0;
-	}
-
-#brddesc * {
-	padding-top: 0;
-	padding-bottom: 0;
 	}
 
 #brdmenu li {
@@ -314,7 +317,7 @@
 	float: right;
 	text-align: right;
 	}
-	
+
 #brdwelcome ul li {
 	display: inline;
 	}
@@ -374,6 +377,9 @@
 	text-decoration: underline;
 	}
 
+#punindex .subscribelink {
+	margin-top: 6px;
+	}
 
 /* Board Footer
 ----------------------------------------------------------------*/
@@ -438,7 +444,7 @@
 	font-weight: normal;
 	}
 
-.pun td {
+.pun td, .pun th {
 	border-style: solid none none solid;
 	border-width: 1px;
 	}
@@ -478,7 +484,7 @@
 	bottom: 0;
 	left: 12px;
 	}
-	
+
 .pun .tcr span.byuser {
 	display: block;
 }
@@ -527,7 +533,7 @@
 	min-height: 1px;
 	position: relative;
 	}
-	
+
 .pun #vf .tclcon {
 	padding-bottom: 1.273em;
 }
@@ -538,7 +544,8 @@
 	}
 
 .pun .icon {
-	border-width: 7px;
+	margin: 0.1em 0 0 0.2em;
+	border-width: 0.6em;
 	border-style: solid;
 	height: 0;
 	width: 0;
@@ -610,14 +617,6 @@
 	float: left;
 	overflow: visible;
 	margin-right: 10px
-	}
-
-.pun select {
-	padding-top: 1px;
-	padding-bottom: 1px;
-	}
-
-.pun fieldset .rbox {
 	}
 
 .pun fieldset .rbox br {
@@ -696,6 +695,58 @@
 	margin-right: 12px;
 	}
 
+.pun .multiselect {
+	float: left;
+	padding-bottom: 7px;
+	}
+
+.pun .checklist {
+	border-width: 1px;
+	border-style: solid;
+	max-height: 9em;
+	width: 20em;
+	overflow: auto;
+	padding: 0.3em 0.5em;
+	margin: 0.25em 16px 0 0.15em;
+	}
+
+.pun .checklist fieldset {
+	border: 0;
+	padding: 0;
+	}
+
+.pun .checklist legend {
+	padding: 0;
+	}
+
+.pun .checklist legend span {
+	width: auto;
+	max-width: 25em;
+	}
+
+.pun .checklist .checklist-item {
+	position: relative;
+	margin: .2em 0;
+	}
+
+.pun .checklist .checklist-item label {
+	padding: 0 0 0 2.1em;
+	}
+
+.pun .checklist .checklist-item .fld-input {
+	position: absolute;
+	left: 0;
+	top: 0;
+	padding: 0;
+	margin: 0;
+	}
+
+.pun .checklist .checklist-item input {
+	margin: 0;
+	height: 1.15em;
+	width: 1.55em;
+	}
+
 /*****************************************************************
 7. PROFILES AND ADMIN
 *****************************************************************/
@@ -705,12 +756,12 @@
 	}
 
 .pun .block2col .blockform, .pun .block2col .block {
-	margin-left: 17em
+	margin-left: 14em
 	}
 
 .pun .blockmenu {
 	float:left;
-	width: 16em
+	width: 13em
 	}
 
 .pun .blockmenu li {
@@ -748,6 +799,12 @@
 	margin-left: 1em
 	}
 
+#adintro ul {
+	list-style-type: disc;
+	margin-left: 8px;
+	padding-left: 16px;
+	}
+
 /*****************************************************************
 8. MAIN POSTS
 *****************************************************************/
@@ -781,7 +838,7 @@
 	}
 
 .pun .postleft dl {
-	padding: 1em 1.5em;
+	padding: 6px;
 	}
 
 .pun .postleft .usercontacts, .pun .postleft .icon {
@@ -826,16 +883,25 @@
 	width:98%;
 	overflow: hidden;
 	padding-bottom: 6px;
+	word-wrap: break-word;
 	}
 
 .pun .postfootright ul, .pun .postfootright div, .pun .postfootright p,
 .pun .postfootleft p {
-	padding: 0.5em 1.5em 0.5em 1.5em;
+	padding: 10px 6px 5px 6px;
 	}
 
 .pun .postfootright li {
 	display: inline;
 	margin-left: 12px;
+	}
+
+.pun .postfootright li:before {
+	content: " | ";
+	}
+
+.pun .postfootright li:first-child:before {
+	content: "";
 	}
 
 .pun .postfootright a:link, .pun .postfootright a:visited {
@@ -910,6 +976,7 @@
 .pun .postmsg .postimg img {
 	max-width: 98%;
 	vertical-align: middle;
+	margin: 7px 0.5em 7px 0;
 }
 
 .pun .postmsg .postimg a:link img, .pun .postmsg .postimg a:visited img {
@@ -948,6 +1015,14 @@
 	text-align: center;
 	}
 
+#brdwelcome, #brdfooter dl a, div.blockmenu li, div.rbox input {
+	line-height: 1.4em
+	}
+
+#announce div.inbox div {
+	padding: 3px 0
+	}
+
 /*****************************************************************
 COLOUR SCHEME
 *****************************************************************/
@@ -984,7 +1059,7 @@ body {
 .pun .blockmenu .box, #adstats dd, #brdfooter #modcontrols*/ {
 	background-color: #FBFBFB
 	}
-	
+
 .pun .isticky td {
 	background-color: #F2F4FA;
 }
@@ -1040,7 +1115,7 @@ body {
 	background: transparent;
 	color: #333
 	}
-	
+
 .pun fieldset {
 	padding: 0px;
 	border: 0;
@@ -1082,6 +1157,15 @@ body {
 	padding-left: 0;
 }
 
+.pun .multiselect, .pun .checklist {
+	color: #333;
+	}
+
+.pun .checklist {
+	border-color: #DBE0E4;
+	background: #fff;
+	}
+
 /* Posts
 ----------------------------------------------------------------*/
 
@@ -1092,7 +1176,7 @@ body {
 .pun .postright, .pun .postfootright {
 	border-left: 1px solid #DDE4EB
 	}
-	
+
 .pun .postleft, .pun .postfootleft {
 	border-right: 1px solid #DDE4EB
 }
@@ -1117,7 +1201,7 @@ body {
 	background-color: #DDE4EB;
 	color: #DDE4EB
 	}
-	
+
 .pun .postfoot {
 	border-top: 1px dashed #DDE4EB;
 }
@@ -1178,7 +1262,7 @@ body {
 .pun h2 a:hover, .pun h2 a:active {
 	color: #fff
 	}
-	
+
 #brdmenu a:link, #brdmenu a:visited {
 	color: #DDD;
 	font-size: 1.167em;
@@ -1217,15 +1301,15 @@ body {
 .pun .iredirect .icon {
 	border-color: #F4F4F4;
 	}
-	
+
 .pun .isticky .icon {
 	border-color: #D7E5F3 #C3CFDC #9FB3C7 #90A2B4;
 	}
-	
+
 .pun .iclosed .icon {
 	border-color: #ACACAC #979797 #898989 #7A7A7A;
 	}
-	
+
 .pun .isticky.iclosed .icon {
 	border-color: #D7E5F3 #C3CFDC #898989 #7A7A7A;
 	}
